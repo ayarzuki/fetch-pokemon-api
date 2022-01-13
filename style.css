@@ -1,0 +1,92 @@
+body {
+	font-family: 'Courier New', Courier, monospace;
+	background-color: #cc99cc;
+}
+
+h1 {
+	text-align: center;
+}
+
+.container {
+	transition: 0.3s;
+	width: 100%;
+	border-radius: 5px;
+	list-style: none;
+	padding: 20px;
+	color: #222;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	width: 100%;
+	border-radius: 5px;
+	list-style: none;
+	padding: 1px;
+	background-color: #f4f4f4;
+	color: #222;
+	text-align: center;
+}
+
+.card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+	animation: bounce 0.5s linear;
+}
+
+img {
+	border-radius: 5px 5px 0 0;
+}
+
+img:hover {
+	transform: scale(1.3);
+}
+
+#pokemonList {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+	grid-gap: 20px;
+	padding-inline-start: 0;
+}
+
+.card-title {
+	text-transform: capitalize;
+	margin-bottom: 0px;
+	font-size: 32px;
+	font-weight: normal;
+}
+.card-subtitle {
+	margin-top: 5px;
+	color: #666;
+	font-weight: lighter;
+}
+
+.card-image {
+	height: 180px;
+}
+
+@keyframes bounce {
+	20% {
+		transform: translateY(-6px);
+	}
+	40% {
+		transform: translateY(0px);
+	}
+
+	80% {
+		transform: translateY(-2px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	#pokemonList {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(230px, 1.5fr));
+		grid-gap: 20px;
+		padding-inline-start: 0;
+	}
+}
